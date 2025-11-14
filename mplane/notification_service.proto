@@ -1,0 +1,22 @@
+syntax = "proto3";
+package oran;
+
+service NotificationService {
+    rpc SendNotification(NotificationRequest) returns (NotificationResponse);
+
+    rpc SubscribeNotifications(SubscribeRequest) returns (stream NotificationRequest);
+}
+
+message NotificationRequest {
+  string type = 1;
+  string payload = 2;
+}
+
+message NotificationResponse {
+  bool success = 1;
+  string error_message = 2;
+}
+
+message SubscribeRequest {
+    string client_id = 1;
+}

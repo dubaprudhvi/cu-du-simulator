@@ -4,6 +4,7 @@ import connect.connect as connect
 import fault.fault as fault
 import kpi.kpi as kpi
 import xmlfiles.kpixml as kpixml
+import mplane.mplane as mplane
 
 from utils.imports import *
 
@@ -14,10 +15,11 @@ def main_menu():
                             message="RAN CONTROLLER",
                             border=True,
                             choices=[
-                                "Connect App",
-                                "Fault Management",
+                                "CONNECT APP",
+                                "FAULT MANAGEMENT",
                                 "KPI METRICS",
                                 "GENERATE XML FILES",
+                                "M-PLANE",
                                 "READ AND UPDATE CONFIGS",
                                 Separator(),
                                 "EXIT",
@@ -32,7 +34,7 @@ def main_menu():
             print( f"{e}")
 
 def parse_init_options(choice):
-    if choice == "Connect App":
+    if choice == "CONNECT APP":
         connect.connect_app_menu()
     elif choice == "Fault Management":
         fault.fault_app_menu()
@@ -40,6 +42,8 @@ def parse_init_options(choice):
         kpi.kpi_menu()
     elif choice == "GENERATE XML FILES":
         kpixml.kpi_xml_menu()
+    elif choice == "M-PLANE":
+        mplane.mplane_app_menu()
     elif choice == "READ AND UPDATE CONFIGS":
         config.config_menu()
     elif choice == "EXIT":

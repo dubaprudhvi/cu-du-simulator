@@ -15,6 +15,9 @@ import gzip
 import threading
 from faker import Faker
 from faker.providers.person.en import Provider
+import grpc
+from concurrent import futures
+from contextlib import contextmanager
 
 CONFIG_PATH = '/opt/wisig/smo/config/config.json'
 
