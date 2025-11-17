@@ -4,3 +4,4 @@ recursive-include kpi *
 recursive-include config *
 recursive-include utils *
 recursive-include xmlfiles *
+recursive-include mplane *
