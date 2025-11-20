@@ -91,7 +91,14 @@ def insert_ves_kpi():
             KPIValue = kpivalue(KPINAME)
 
             line_protocol = (
-                f'kpidata,measObjInstId={config["VESINFLUX"]["MEASOBJINSTID"]},measuredEntityUserName={config["VESINFLUX"]["MEASUREDENTITYUSERNAME"]},'
+                f'kpidata,measObjInstId={config["VESINFLUX"]["MEASOBJINSTID_ONE"]},measuredEntityUserName={config["VESINFLUX"]["MEASUREDENTITYUSERNAME"]},'
+                f'sourceName={config["VESINFLUX"]["SOURCE_NAME"]},KPINAME={KPINAME} '
+                f'KPIValue={KPIValue},suspectFlag={str(config["VESINFLUX"]["SUSPECT_FLAG"]).lower()},timeStamp={current_timestamp}'
+            )
+            line_protocol_batch.append(line_protocol)
+
+            line_protocol = (
+                f'kpidata,measObjInstId={config["VESINFLUX"]["MEASOBJINSTID_TWO"]},measuredEntityUserName={config["VESINFLUX"]["MEASUREDENTITYUSERNAME"]},'
                 f'sourceName={config["VESINFLUX"]["SOURCE_NAME"]},KPINAME={KPINAME} '
                 f'KPIValue={KPIValue},suspectFlag={str(config["VESINFLUX"]["SUSPECT_FLAG"]).lower()},timeStamp={current_timestamp}'
             )

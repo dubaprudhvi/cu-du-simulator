@@ -1,3 +1,14 @@
+# Install pipx if not already installed
+sudo apt install pipx
+
+# Ensure pipx is properly set up
+pipx ensurepath
+
+# Install InquirerPy in an isolated environment
+pipx install InquirerPy
+
+
+
 # This will store the requirements in the file
 pipdeptree --freeze > requirements.txt
 

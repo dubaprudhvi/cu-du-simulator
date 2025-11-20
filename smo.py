@@ -36,7 +36,7 @@ def main_menu():
 def parse_init_options(choice):
     if choice == "CONNECT APP":
         connect.connect_app_menu()
-    elif choice == "Fault Management":
+    elif choice == "FAULT MANAGEMENT":
         fault.fault_app_menu()
     elif choice == "KPI METRICS":
         kpi.kpi_menu()
