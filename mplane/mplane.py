@@ -1,5 +1,6 @@
 from utils.imports import *
 import mplane.fault.mplanefault as mplanefault
+import mplane.performance.mplaneperformance as mplaneperformance
 
 def mplane_app_menu():
     try:
@@ -21,7 +22,7 @@ def mplane_app_menu():
             elif choice == "FAULTS":
                 mplanefault.mplane_fault()
             elif choice == "PERFORMANCE METRICS":
-                print("PERFORMANCE Function is Not implemented")
+                mplaneperformance.mplane_performance()
             elif choice == "BACK":
                 break
             elif choice == "EXIT":

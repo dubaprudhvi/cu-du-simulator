@@ -69,5 +69,11 @@
         "IS_CLEAR": [true, false],
         "FAULT_SOURCE": ["Module"],
         "AFFECTED_OBJECT_NAME": ["Sync Module"]
+    },
+    "MPLANEPERFORMANCE": {
+        "NODE": ["node"],
+        "PORT": 50052,
+        "MESSAGE_FREQUENCY": 1,
+        "RU_ID_LIST": [0, 1, 2, 3]
     }
 }
