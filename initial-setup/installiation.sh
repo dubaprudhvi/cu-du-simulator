@@ -19,6 +19,16 @@ sudo apt install python3-pipdeptree
 
 pip install grpcio
 
+sudo apt install python3-grpcio
+
 pip3 install grpcio grpcio-tools
 
 python3 -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. mplane/notification_service.proto
+
+
+
+
+pip install --upgrade --break-system-packages "protobuf>=6.31.1,<7"
+python3 -m pip show grpcio grpcio-tools
+python3 -m pip install --break-system-packages --upgrade "grpcio>=1.76.0" "grpcio-tools>=1.76.0"
+
