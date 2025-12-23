@@ -74,6 +74,7 @@
         "NODE": ["node"],
         "PORT": 50052,
         "MESSAGE_FREQUENCY": 1,
+        "MESSAGE_IN_LIMIT": 100, 
         "RU_ID_LIST": [0, 1, 2, 3]
     }
 }
